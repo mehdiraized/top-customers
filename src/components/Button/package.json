@@ -1,0 +1,6 @@
+{
+	"name": "button",
+	"version": "0.1.0",
+	"private": true,
+	"main": "./Button.component.tsx"
+}

@@ -1,0 +1,6 @@
+{
+	"name": "locale-switcher",
+	"version": "0.1.0",
+	"private": true,
+	"main": "./LocaleSwitcher.component.tsx"
+}
