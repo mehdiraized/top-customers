@@ -11,6 +11,4 @@ export default createMiddleware({
 	localeDetection: false,
 });
 
-export const config = {
-	matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
-};
+export const config = { matcher: ["/", `/(en|du)/:path*`] };
