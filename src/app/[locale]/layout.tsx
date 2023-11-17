@@ -1,7 +1,10 @@
 import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
-import { useLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
+
+import { locales } from "@/application/constants/languages.constant";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,12 +13,18 @@ type Props = {
 	params: { locale: string };
 };
 
-export default function LocaleLayout({ children }: Props) {
-	const locale = useLocale();
+export default function LocaleLayout({ children, params: { locale } }: Props) {
+	if (!locales.includes(locale as any)) notFound();
+
+	unstable_setRequestLocale(locale);
 
 	return (
 		<html lang={locale}>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);
+}
+
+export function generateStaticParams() {
+	return locales.map((locale) => ({ locale }));
 }
