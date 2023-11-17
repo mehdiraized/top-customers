@@ -10,5 +10,11 @@
 	},
 	"LocaleSwitcher": {
 		"switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
+	},
+	"errors": {
+		"users": {
+			"fetch": "Etwas ist schief gelaufen",
+			"fetchAgain": "Versuchen Sie es erneut"
+		}
 	}
 }
