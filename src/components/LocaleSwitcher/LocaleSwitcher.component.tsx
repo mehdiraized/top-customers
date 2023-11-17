@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 
-import Button from "@/components/Button";
+import Button from "@/components/Button/Button.component";
 
 export default function LocaleSwitcher() {
 	const t = useTranslations("LocaleSwitcher");

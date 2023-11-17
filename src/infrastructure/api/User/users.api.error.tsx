@@ -1,7 +1,8 @@
 "use client";
 
-import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
+
+import Button from "@/components/Button/Button.component";
 
 export default function HandleErrorUserFetch({
 	title,
