@@ -1,4 +1,4 @@
 export interface UserDetails {
-	name: string;
+	names: string;
 	age: number;
 }
